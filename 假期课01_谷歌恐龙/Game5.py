@@ -35,6 +35,12 @@ def main(highest_score):
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                 pygame.quit()
                 exit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE or event.key == pygame.K_UP:
+                    dino.jump(sounds)
+                if event.key == pygame.K_LSHIFT or event.key == pygame.K_RSHIFT or event.key == pygame.K_DOWN:
+                    dino.duck()
+            screen.fill(cfg.BACKGROUND_COLOR)
         # --随机添加云
         
         
